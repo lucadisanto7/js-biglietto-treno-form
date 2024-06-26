@@ -1,24 +1,30 @@
-let age = 0
-let chilometri = 0
+document.getElementById('calculate-price').addEventListener('click', function() {
+    // Recupera i valori dai campi di input
+    let name = document.getElementById('name').value;
+    let km = document.getElementById('km').value;
+    let age = document.getElementById('age').value;
 
-let prezzo_biglietto = 0.21 * chilometri;
-let sconto = 0
-let prezzo_scontato
-let prezzo_finale
+    // Calcola il prezzo del biglietto
+    let prezzo_biglietto = 0.21 * km;
+    let sconto = 0;
 
-if (age < 18){
-    sconto = 20;
-}
-else if (age > 65){
-    sconto = 40;
-}
-if (sconto != 0){
-    prezzo_scontato = prezzo_biglietto * sconto / 100;
-    prezzo_finale = prezzo_biglietto - prezzo_scontato
-    console.log(prezzo_scontato)
-}
-else{
-    prezzo_finale = prezzo_biglietto
-}
+    // Determina lo sconto in base all'età
+    if (age === "Minorenne") {
+        sconto = 20;
+    } else if (age === "Over 65") {
+        sconto = 40;
+    }
 
-console.log(prezzo_finale)
+    // Calcola il prezzo finale con lo sconto se applicabile
+    let prezzo_finale = prezzo_biglietto;
+    if (sconto > 0) {
+        let prezzo_scontato = prezzo_biglietto * sconto / 100;
+        prezzo_finale = prezzo_biglietto - prezzo_scontato;
+    }
+
+    // Mostra il risultato
+    console.log(`Nome: ${name}`);
+    console.log(`Km: ${km}`);
+    console.log(`Età: ${age}`);
+    console.log(`Prezzo finale del biglietto: €${prezzo_finale.toFixed(2)}`);
+});
