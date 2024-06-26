@@ -29,10 +29,4 @@ document.getElementById('calculate-price').addEventListener('click', function() 
     document.getElementById('carrozza').innerHTML= Math.floor(Math.random() * 10 + 1)
     document.getElementById('codiceCP').innerHTML= Math.floor(Math.random() * 90000 + 10000)
     document.getElementById('costo_biglietto').innerHTML = '€' + prezzo_finale
-    
-    // Mostra il risultato
-    console.log(`Nome: ${name}`);
-    console.log(`Km: ${km}`);
-    console.log(`Età: ${age}`);
-    console.log(`Prezzo finale del biglietto: €${prezzo_finale.toFixed(2)}`);
 });
