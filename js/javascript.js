@@ -27,6 +27,8 @@ document.getElementById('calculate-price').addEventListener('click', function() 
     // Lettura dati biglietto
     document.getElementById('passeggero').innerHTML = name
     document.getElementById('carrozza').innerHTML= Math.floor(Math.random() * 10 + 1)
+    document.getElementById('codiceCP').innerHTML= Math.floor(Math.random() * 90000 + 10000)
+    document.getElementById('costo_biglietto').innerHTML = '€' + prezzo_finale
     
     // Mostra il risultato
     console.log(`Nome: ${name}`);
