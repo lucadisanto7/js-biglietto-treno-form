@@ -21,6 +21,8 @@ document.getElementById('calculate-price').addEventListener('click', function() 
         let prezzo_scontato = prezzo_biglietto * sconto / 100;
         prezzo_finale = prezzo_biglietto - prezzo_scontato;
     }
+    // Lettura del prezzo finale
+    document.getElementById('prezzo_finale').innerHTML ='IL COSTO DEL BIGLIETTO È: €' + prezzo_finale.toFixed(2)
 
     // Mostra il risultato
     console.log(`Nome: ${name}`);
