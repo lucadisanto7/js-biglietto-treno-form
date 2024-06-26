@@ -23,7 +23,11 @@ document.getElementById('calculate-price').addEventListener('click', function() 
     }
     // Lettura del prezzo finale
     document.getElementById('prezzo_finale').innerHTML ='IL COSTO DEL BIGLIETTO È: €' + prezzo_finale.toFixed(2)
-
+    
+    // Lettura dati biglietto
+    document.getElementById('passeggero').innerHTML = name
+    document.getElementById('carrozza').innerHTML= Math.floor(Math.random() * 10 + 1)
+    
     // Mostra il risultato
     console.log(`Nome: ${name}`);
     console.log(`Km: ${km}`);
