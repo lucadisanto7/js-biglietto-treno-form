@@ -1,5 +1,5 @@
-let age = prompt('inserisci la tua eta');
-let chilometri = prompt('inserisci i chilometri da percorrere');
+let age = 0
+let chilometri = 0
 
 let prezzo_biglietto = 0.21 * chilometri;
 let sconto = 0
