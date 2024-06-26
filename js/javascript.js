@@ -21,12 +21,10 @@ document.getElementById('calculate-price').addEventListener('click', function() 
         let prezzo_scontato = prezzo_biglietto * sconto / 100;
         prezzo_finale = prezzo_biglietto - prezzo_scontato;
     }
-    // Lettura del prezzo finale
-    document.getElementById('prezzo_finale').innerHTML ='IL COSTO DEL BIGLIETTO È: €' + prezzo_finale.toFixed(2)
-    
+  
     // Lettura dati biglietto
     document.getElementById('passeggero').innerHTML = name
     document.getElementById('carrozza').innerHTML= Math.floor(Math.random() * 10 + 1)
     document.getElementById('codiceCP').innerHTML= Math.floor(Math.random() * 90000 + 10000)
-    document.getElementById('costo_biglietto').innerHTML = '€' + prezzo_finale
+    document.getElementById('costo_biglietto').innerHTML = '€' + prezzo_finale.toFixed(2)
 });
