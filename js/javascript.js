@@ -28,3 +28,9 @@ document.getElementById('calculate-price').addEventListener('click', function() 
     document.getElementById('codiceCP').innerHTML= Math.floor(Math.random() * 90000 + 10000)
     document.getElementById('costo_biglietto').innerHTML = '€' + prezzo_finale.toFixed(2)
 });
+    // Reset dei dati
+    document.getElementById('reset-fields').addEventListener('click', function() {
+    document.getElementById('name').value = '';
+    document.getElementById('km').value = '';
+    document.getElementById('age').selectedIndex = 0;
+});
